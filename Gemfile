@@ -1,4 +1,4 @@
 source :rubygems
 
 gem "nokogiri"
-gem "rubyzip"
+gem "rubyzip", :require => "zip/zip"
