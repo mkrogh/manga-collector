@@ -20,10 +20,12 @@ How?
 
 Right now in this initial state the app only has one repository that handles downloads from http://www.mangareader.net, and it is not yet able to process the full catalog, only individual mangas. 
 
-Usage is currently restricted to manually editing the Manga.rb source file as such:
+Usage is:
 
-    manga = MangaReaderRepository.new("http://www.mangareader.net/322/code-breaker.html")
-    manga.save_chapter(50)
+    Usage:
+      ruby -I lib manga-collection.rb save <manga_url>
+    Options:
+      -c, [--chapter=N]
 
 Road map
 --------
@@ -32,5 +34,5 @@ A cli interface might be the next step, or perhaps a GUI written in Shoes. Anoth
 
 License
 -------
-See LICENCE file
+See LICENSE file
 
