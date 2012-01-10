@@ -26,6 +26,11 @@ Usage is:
       ruby -I lib manga-collection.rb save <manga_url>
     Options:
       -c, [--chapter=N]
+      -l, [--last-chapter=N]
+
+Example:
+
+    ruby -I lib manga-collection.rb save http://www.mangareader.net/94/bleach.html -c 1 -l 3
 
 Road map
 --------

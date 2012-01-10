@@ -42,8 +42,8 @@ module Manga
     end
 
 
-    def save_chapter(nbr=0)
-      chapter = fetch_chapter(nbr)
+    def save_chapter(nbr=1)
+      chapter = fetch_chapter(nbr-1)
       
       puts "Downloading: #{chapter.title} (#{chapter.pages.length} pages)"   
       bar = ProgressBar.new
