@@ -23,14 +23,14 @@ Right now in this initial state the app only has one repository that handles dow
 Usage is:
 
     Usage:
-      ruby -I lib manga-collection.rb save <manga_url>
+      ruby -I lib manga-collector.rb save <manga_url>
     Options:
       -c, [--chapter=N]
       -l, [--last-chapter=N]
 
 Example:
 
-    ruby -I lib manga-collection.rb save http://www.mangareader.net/94/bleach.html -c 1 -l 3
+    ruby -I lib manga-collector.rb save http://www.mangareader.net/94/bleach.html -c 1 -l 3
 
 Road map
 --------
