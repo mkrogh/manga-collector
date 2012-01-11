@@ -27,15 +27,16 @@ Usage is:
     Options:
       -c, [--chapter=N]
       -l, [--last-chapter=N]
+      -v, [--verbose]
 
 Example:
 
-    ruby -I lib manga-collector.rb save http://www.mangareader.net/94/bleach.html -c 1 -l 3
+    ruby -I lib manga-collector.rb save http://www.mangareader.net/94/bleach.html -c 1 -l 3 -v
 
 Road map
 --------
 
-A cli interface might be the next step, or perhaps a GUI written in Shoes. Another possibility is a Java client, using JRuby to leverage the current Ruby base.
+A cli interface might be the next step, or perhaps a GUI written in Shoes or Titanium. Another possibility is a Java client, using JRuby to leverage the current Ruby base.
 
 License
 -------
