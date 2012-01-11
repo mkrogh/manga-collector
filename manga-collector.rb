@@ -35,8 +35,13 @@ class MangaCollector < Thor
   desc "save <manga_url>", "save a manga as a series of cbz chapters"
   method_option :chapter, :aliases => "-c", :type => :numeric, :lazy_default => 1  
   method_option :last_chapter, :aliases => "-l", :type => :numeric, :lazy_default => 1
+  method_option :verbose, :aliases => "-v", :type => :boolean, :default => false
   def save(manga_url)
-    @manga = Manga::MangaReaderRepository.new(manga_url)
+    @manga = Manga::Repository.repository(manga_url)
+
+    return if @manga.nil?
+    
+    @manga.verbose = options[:verbose]
 
     if options[:last_chapter] and options[:chapter]
       save_range(options[:chapter]..options[:last_chapter])
