@@ -1,6 +1,7 @@
 require "bundler/setup"
 require "open-uri"
 Bundler.require(:default)
+require "zip/zipfilesystem"
 
 module Manga
   class Manga
@@ -44,8 +45,13 @@ module Manga
       file = file + File.extname(@img_url)
       
       Zip::ZipFile.open(archive, Zip::ZipFile::CREATE) do |zipfile|
-        img = open(@img_url) 
-        zipfile.add(file, img)
+        img = open(@img_url)
+        #ugly ugly rubyzip hack:
+        if RUBY_VERSION < "1.9.2"        
+          zipfile.add(file, img.path)
+        else
+          zipfile.add(file, img)
+        end
       end
       
       @saved = true

@@ -3,6 +3,7 @@ require "open-uri"
 require "fileutils"
 Bundler.require(:default)
 
+# ruby 1.8.x fix
 def require_relative(relative_feature)
   c = caller.first
   fail "Can't parse #{c}" unless c.rindex(/:\d+(:in `.*')?$/)
