@@ -38,6 +38,11 @@ Road map
 
 A cli interface might be the next step, or perhaps a GUI written in Shoes or Titanium. Another possibility is a Java client, using JRuby to leverage the current Ruby base.
 
+TODO
+----
+
+1. It seems like the codebase only works with jpg files. Which is quite weird.
+
 License
 -------
 See LICENSE file
