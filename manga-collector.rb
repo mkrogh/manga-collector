@@ -1,9 +1,7 @@
-require "rubygems"
-require "bundler/setup"
 require "uri"
 require "open-uri"
+require "thor"
 
-Bundler.require(:default)
 require "manga/repositories"
 
 # Based on https://gist.github.com/1217911

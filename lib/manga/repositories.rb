@@ -1,22 +1,9 @@
-require "bundler/setup"
 require "open-uri"
 require "fileutils"
-Bundler.require(:default)
-
-# ruby 1.8.x fix
-def require_relative(relative_feature)
-  c = caller.first
-  fail "Can't parse #{c}" unless c.rindex(/:\d+(:in `.*')?$/)
-  file = $`
-  if /\A\((.*)\)/ =~ file # eval, etc.
-    raise LoadError, "require_relative is called in #{$1}"
-  end
-  absolute = File.expand_path(relative_feature, File.dirname(file))
-  require absolute
-end unless Kernel.respond_to?(:require_relative)
+require "nokogiri"
 
 
-require_relative "models"
+require "manga/models"
 
 module Manga
   class Repository    
